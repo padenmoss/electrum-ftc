@@ -9,6 +9,7 @@ import imp
 import argparse
 import subprocess
 
+from distutils import core
 from setuptools import setup, find_packages
 from setuptools.command.install import install
 from setuptools.command.build_py import build_py
@@ -54,6 +55,8 @@ extras_require['full'] = [pkg for sublist in list(extras_require.values()) for p
 
 class CustomInstallCommand(install):
     def run(self):
+        setup = core.run_setup('neoscrypt_module/setup.py', stop_after='commandline')
+        setup.run_command('install')
         install.run(self)
         # potentially build Qt icons file
         try:
