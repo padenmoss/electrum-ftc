@@ -170,7 +170,7 @@ class Abstract_Wallet(AddressSynchronizer):
     def __init__(self, storage):
         AddressSynchronizer.__init__(self, storage)
 
-        self.electrum_version = ELECTRUM_VERSION
+        self.electrum_version = ELECTRUM_FTC_VERSION
         # saved fields
         self.use_change            = storage.get('use_change', True)
         self.multiple_change       = storage.get('multiple_change', False)

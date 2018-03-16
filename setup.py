@@ -11,6 +11,7 @@ import subprocess
 
 from setuptools import setup, find_packages
 from setuptools.command.install import install
+from setuptools.command.build_py import build_py
 
 with open('contrib/requirements/requirements.txt') as f:
     requirements = f.read().splitlines()
@@ -67,10 +68,20 @@ class CustomInstallCommand(install):
             except Exception as e:
                 print('Warning: building icons file failed with {}'.format(e))
 
+class BuildPyCommand(build_py):
+    def run(self):
+        build_py.run(self)
+        with open('build/lib/electrum/version.py', 'r+') as fp:
+            verfile = fp.readlines()
+            verfile[0] = "ELECTRUM_FTC_VERSION = '{}'\n".format(
+                version.ELECTRUM_FTC_VERSION)
+            fp.seek(0)
+            fp.writelines(verfile)
+            fp.truncate()
 
 setup(
     name="Electrum",
-    version=version.ELECTRUM_VERSION,
+    version=version.ELECTRUM_FTC_VERSION,
     install_requires=requirements,
     extras_require=extras_require,
     packages=[
@@ -98,6 +109,7 @@ setup(
     url="https://electrum.org",
     long_description="""Lightweight Bitcoin Wallet""",
     cmdclass={
+        'build_py': BuildPyCommand,
         'install': CustomInstallCommand,
     },
 )
