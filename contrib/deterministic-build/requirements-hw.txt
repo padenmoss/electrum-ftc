@@ -56,8 +56,8 @@ idna==2.7 \
     --hash=sha256:684a38a6f903c1d71d6d5fac066b58d7768af4de2b832e426ec79c30daa94a16
 keepkey==4.0.2 \
     --hash=sha256:cddee60ae405841cdff789cbc54168ceaeb2282633420f2be155554c25c69138
-libusb1==1.6.4 \
-    --hash=sha256:8c930d9c1d037d9c83924c82608aa6a1adcaa01ca0e4a23ee0e8e18d7eee670d
+libusb1==1.6.5 \
+    --hash=sha256:4707f81e933a97fed1c5bf7d4957f07bae1139cb8084bdee1f50201a40e3fd7c
 mnemonic==0.18 \
     --hash=sha256:02a7306a792370f4a0c106c2cf1ce5a0c84b9dbd7e71c6792fdb9ad88a727f1d
 pbkdf2==1.3 \
