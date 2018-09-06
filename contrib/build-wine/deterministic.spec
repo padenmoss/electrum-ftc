@@ -47,7 +47,7 @@ datas += collect_data_files('keepkeylib')
 datas += collect_data_files('ckcc')
 
 # We don't put these files in to actually include them in the script but to make the Analysis method scan them for imports
-a = Analysis([home+'run_electrum_ftc',
+a = Analysis([home+'run_electrum',
               home+'electrum/gui/qt/main_window.py',
               home+'electrum/gui/text.py',
               home+'electrum/util.py',
