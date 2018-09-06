@@ -6,7 +6,7 @@ import sys
 import os
 
 PACKAGE='Electrum-FTC'
-PYPKG='electrum_ftc'
+PYPKG='electrum'
 MAIN_SCRIPT='run_electrum_ftc'
 ICONS_FILE='electrum.icns'
 

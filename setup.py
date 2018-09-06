@@ -99,11 +99,9 @@ setup(
     install_requires=requirements,
     extras_require=extras_require,
     packages=[
-        'electrum_ftc',
-        'electrum_ftc.gui',
-        'electrum_ftc.gui.qt',
-        'electrum_ftc.plugins',
-    ] + [('electrum_ftc.plugins.'+pkg) for pkg in find_packages('electrum/plugins')],
+        pkg.replace("electrum", "electrum_ftc") for pkg in find_packages(
+            exclude=['*.tests', '*.kivy', '*.kivy.*'])
+    ],
     package_dir={
         'electrum_ftc': 'electrum'
     },
