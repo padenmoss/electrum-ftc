@@ -1,4 +1,3 @@
 tox
 python-coveralls
 tox-travis
-pyqt5
