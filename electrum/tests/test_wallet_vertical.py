@@ -131,8 +131,8 @@ class TestWalletKeystoreAddressIntegrityForMainnet(SequentialTestCase):
         w = WalletIntegrityHelper.create_standard_wallet(ks)
         self.assertEqual(w.txin_type, 'p2wpkh')
 
-        self.assertEqual(w.get_receiving_addresses()[0], 'bc1qx94dutas7ysn2my645cyttujrms5d9p57f6aam')
-        self.assertEqual(w.get_change_addresses()[0], 'bc1qcywwsy87sdp8vz5rfjh3sxdv6rt95kujdqq38g')
+        self.assertEqual(w.get_receiving_addresses()[0], 'fc1qx94dutas7ysn2my645cyttujrms5d9p5ydg8a6')
+        self.assertEqual(w.get_change_addresses()[0], 'fc1qcywwsy87sdp8vz5rfjh3sxdv6rt95kujhyjt8f')
 
     @needs_test_with_all_ecc_implementations
     @mock.patch.object(storage.WalletStorage, '_write')
@@ -182,14 +182,14 @@ class TestWalletKeystoreAddressIntegrityForMainnet(SequentialTestCase):
 
         self.assertTrue(isinstance(ks, keystore.BIP32_KeyStore))
 
-        self.assertEqual(ks.xprv, 'xprv9z8izheguGnLopSqkY7GcGFrP2Gu6rzBvvHo6uB9B8DWJhsows6WDZAsbBTaP3ncP2AVbTQphyEQkahrB9s1L7ihZtfz5WGQPMbXwsUtSik')
-        self.assertEqual(ks.xpub, 'xpub6D85QDBajeLe2JXJrZeGyQCaw47PWKi3J9DPuHakjTkVBWCxVQQkmMVMSSfnw39tj9FntbozpRtb1AJ8ubjeVSBhyK4M5mzdvsXZzKPwodT')
+        self.assertEqual(ks.xprv, 'xqMPAv4iGYGFcYcc9rTVH6L23zEi5RV6BFPyUPA9UCME2nEcmRazoHPLtsAxx9GQ7SGVxtFeyUW7au7Bzuq8cuPWYEaXhmKzvMfXN87XoUkWNws')
+        self.assertEqual(ks.xpub, 'xq1voxVb4xgqoGpByz36rHZPX8KQxtXmtmc6B9ydTDwdg8BLqCNbPKQ1TfDpWX2iz6mBxh4oqq2FdAcd41ZsgAmgXftNe9dEwd34TnXH7geD8pL')
 
         w = WalletIntegrityHelper.create_standard_wallet(ks)
         self.assertEqual(w.txin_type, 'p2pkh')
 
-        self.assertEqual(w.get_receiving_addresses()[0], '1F88g2naBMhDB7pYFttPWGQgryba3hPevM')
-        self.assertEqual(w.get_change_addresses()[0], '1H4QD1rg2zQJ4UjuAVJr5eW1fEM8WMqyxh')
+        self.assertEqual(w.get_receiving_addresses()[0], '6sraTYxc7tBUdBmkbmYrJ2Dhg3CmzCDh9x')
+        self.assertEqual(w.get_change_addresses()[0], '6unqzY2hyWtZWYh7WMyJsQK2UHxLRKXqXw')
 
     @needs_test_with_all_ecc_implementations
     @mock.patch.object(storage.WalletStorage, '_write')
