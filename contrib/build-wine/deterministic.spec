@@ -34,10 +34,10 @@ binaries += [b for b in collect_dynamic_libs('PyQt5') if 'qwindowsvista' in b[0]
 binaries += [('C:/tmp/libsecp256k1.dll', '.')]
 
 datas = [
-    (home+'lib/*.json', 'electrum_ftc'),
-    (home+'lib/wordlist/english.txt', 'electrum_ftc/wordlist'),
-    (home+'lib/locale', 'electrum_ftc/locale'),
-    (home+'plugins', 'electrum_ftc/plugins'),
+    (home+'electrum/*.json', 'electrum_ftc'),
+    (home+'electrum/wordlist/english.txt', 'electrum_ftc/wordlist'),
+    (home+'electrum/locale', 'electrum_ftc/locale'),
+    (home+'electrum/plugins', 'electrum_ftc/plugins'),
     ('C:\\Program Files (x86)\\ZBar\\bin\\', '.')
 ]
 datas += collect_data_files('trezorlib')

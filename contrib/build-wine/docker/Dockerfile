@@ -9,7 +9,8 @@ RUN dpkg --add-architecture i386 && \
         wget=1.19.4-1ubuntu2.1 \
         gnupg2=2.2.4-1ubuntu1.1 \
         dirmngr=2.2.4-1ubuntu1.1 \
-        software-properties-common=0.96.24.32.4 \
+        python3-software-properties=0.96.24.32.1 \
+        software-properties-common=0.96.24.32.1 \
         && \
     wget -nc https://dl.winehq.org/wine-builds/Release.key && \
     apt-key add Release.key && \
@@ -36,7 +37,7 @@ RUN dpkg --add-architecture i386 && \
 ADD ./contrib /contrib
 RUN cd /contrib/build-wine && \
     grep -v build-electrum-git.sh build.sh | bash && \
-    wine c:/python3.5.4/python.exe -m pip install \
+    wine c:/python3.6.6/python.exe -m pip install \
         -r ../deterministic-build/requirements.txt \
         -r ../deterministic-build/requirements-hw.txt
 
