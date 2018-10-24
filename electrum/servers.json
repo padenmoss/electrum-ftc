@@ -1,16 +1,4 @@
 {
-    "electrumx-ch-1.feathercoin.ch": {
-        "pruning": "-",
-        "s": "50002",
-        "t": "50001",
-        "version": "1.3"
-    },
-    "electrumx-de-2.feathercoin.ch": {
-        "pruning": "-",
-        "s": "50002",
-        "t": "50001",
-        "version": "1.3"
-    },
     "electrumxftc.trezarcoin.com": {
         "pruning": "-",
         "s": "50002",
