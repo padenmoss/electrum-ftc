@@ -3,24 +3,30 @@
         "pruning": "-",
         "s": "50002",
         "t": "50001",
-        "version": "1.3"
+        "version": "1.4"
     },
     "electrumx.feathercoin.com": {
         "pruning": "-",
         "s": "50002",
         "t": "50001",
-        "version": "1.3"
-    },
-    "electrumx-1.feathercoin.com": {
-        "pruning": "-",
-        "s": "50002",
-        "t": "50001",
-        "version": "1.3"
+        "version": "1.4"
     },
     "electrumx-2.feathercoin.com": {
         "pruning": "-",
         "s": "50002",
         "t": "50001",
-        "version": "1.3"
+        "version": "1.4"
+    },
+    "p2pool.neoscrypt.de": {
+        "pruning": "-",
+        "s": "50002",
+        "t": "50001",
+        "version": "1.4"
+    },
+    "electrumx-1.neoscrypt.de": {
+        "pruning": "-",
+        "s": "50002",
+        "t": "50001",
+        "version": "1.4"
     }
 }
